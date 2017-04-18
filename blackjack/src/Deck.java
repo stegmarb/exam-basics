@@ -37,7 +37,6 @@ public class Deck {
     Collections.shuffle(deck);
   }
 
-
   public Card draw() {
     deckShuffle();
     Card topCard = deck.get(0);

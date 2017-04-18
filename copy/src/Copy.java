@@ -28,10 +28,10 @@ public class Copy {
       List<String> lines = Files.readAllLines(sourcePath);
       try {
         Files.createFile(destinationPath);
+        Files.write(destinationPath, lines);
       } catch (IOException e) {
         System.out.println("Unable to reach destination!");
       }
-      Files.write(destinationPath, lines);
     } catch (IOException e) {
       System.out.println("Unable to read source file!");
     }
