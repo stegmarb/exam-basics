@@ -1,12 +1,11 @@
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
 public class Deck {
   private List<Card> deck = new ArrayList<>();
 
   public Deck(int wholeNumber) {
+    fillDeck(wholeNumber);
   }
 
   public String giveRandomValue() {
@@ -14,22 +13,36 @@ public class Deck {
     return values[(int) (Math.random()*values.length)];
   }
 
-  public void fillDeck() {
+  public void fillDeck(int wholeNumber) {
     int count = 0;
-    for (int i = 0; i < deck.size(); i++) {
+    for (int i = 0; i < wholeNumber; i++) {
       if (count == 0) {
-      deck.add(new Card(giveRandomValue(), "Hearts"));
+      deck.add(new Card("Hearts", giveRandomValue()));
       } else if (count == 1) {
-        deck.add(new Card(giveRandomValue(), "Clubs"));
+        deck.add(new Card("Clubs", giveRandomValue()));
       } else if (count == 2) {
-        deck.add(new Card(giveRandomValue(), "Diamonds"));
+        deck.add(new Card("Diamonds", giveRandomValue()));
       } else if (count == 3) {
-        deck.add(new Card(giveRandomValue(), "Spades"));
+        deck.add(new Card( "Spades", giveRandomValue()));
       }
       count++;
       if (count > 3) {
       count = 0;
       }
     }
+  }
+
+  public int getColorAmount(String color) {
+    int count = 0;
+    for (Card card : deck) {
+      if (card.getColor() == color) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  public String toString() {
+    return deck.size() + " cards - " + getColorAmount("Clubs") + " Clubs, " + getColorAmount("Diamonds") + " Diamonds, " + getColorAmount("Hearts") + " Hearts, " + getColorAmount("Spades") + " Spades";
   }
 }
