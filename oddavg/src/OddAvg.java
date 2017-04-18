@@ -1,9 +1,10 @@
+import java.util.Arrays;
 import java.util.List;
 
 public class OddAvg {
-  public int oddAverage(List<Integer> numbers) {
-    int sumOfOddNumbers = 0;
-    int numOfOddNumbers = 0;
+  public static double oddAverage(List<Integer> numbers) {
+    double sumOfOddNumbers = 0;
+    double numOfOddNumbers = 0;
     for (Integer number : numbers) {
       if (number%2 == 1) {
         sumOfOddNumbers+=number;
