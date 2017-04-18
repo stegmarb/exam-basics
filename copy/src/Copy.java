@@ -33,7 +33,7 @@ public class Copy {
       }
       Files.write(destinationPath, lines);
     } catch (IOException e) {
-      System.out.println("Unable to read source file!");;
+      System.out.println("Unable to read source file!");
     }
   }
 }
