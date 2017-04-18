@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.List;
 
 public class OddAvg {
@@ -6,11 +5,15 @@ public class OddAvg {
     double sumOfOddNumbers = 0;
     double numOfOddNumbers = 0;
     for (Integer number : numbers) {
-      if (number%2 == 1) {
-        sumOfOddNumbers+=number;
+      if (number % 2 == 1) {
+        sumOfOddNumbers += number;
         numOfOddNumbers++;
       }
     }
-    return sumOfOddNumbers/numOfOddNumbers;
+    if (sumOfOddNumbers == 0) {
+      return 0;
+    } else {
+      return sumOfOddNumbers / numOfOddNumbers;
+    }
   }
 }
