@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
@@ -30,6 +31,18 @@ public class Deck {
       count = 0;
       }
     }
+  }
+
+  public void deckShuffle() {
+    Collections.shuffle(deck);
+  }
+
+
+  public Card draw() {
+    deckShuffle();
+    Card topCard = deck.get(0);
+    deck.remove(deck.get(0));
+    return topCard;
   }
 
   public int getColorAmount(String color) {

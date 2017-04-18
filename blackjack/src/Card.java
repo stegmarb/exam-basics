@@ -7,8 +7,8 @@ public class Card {
     this.value = value;
   }
 
-  public void representCard() {
-    System.out.println(value + " " + color);
+  public String toString() {
+    return value + " " + color;
   }
 
   public String getColor() {
