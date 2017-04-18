@@ -36,15 +36,16 @@ The application is accepted if:
 
 #### Your answer:
 [add your answer here]   
-1:   
-2:   
-3:   
-4:   
-5:   
-6:   
-7:   
-8:   
+1: method declaration
+2: return type
+3: method's name
+4: parameter
+5: variable
+6: new variable  
+7: body  
+8: return statement
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
 [add your answer here]
+Constructor is special method, which can be used for creating instances of class. It can contain several parameters, and can define which parameter variable will be equal with which field of class when the constructor is called.
